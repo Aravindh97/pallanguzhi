@@ -2,6 +2,8 @@
 
 **Live demo: [aravindh97.github.io/pallanguzhi](https://aravindh97.github.io/pallanguzhi/)**: play Pallanguzhi against the Go AI and see every move it considered. The rules and AI run in your browser as Go WebAssembly, the same code as the terminal version.
 
+[![pallanguzhi running in the browser](docs/screenshot.png)](https://aravindh97.github.io/pallanguzhi/)
+
 Pallanguzhi (பல்லாங்குழி), the fourteen-pit Tamil mancala game, with a rules engine and a search-based AI opponent in Go. No dependencies.
 
 ## Play it
