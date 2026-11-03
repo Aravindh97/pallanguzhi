@@ -1,0 +1,14 @@
+  .board { background:#7a4a24; border-radius:60px; padding:26px 36px; display:grid; grid-template-columns:repeat(7, 1fr) 90px; gap:14px; align-items:center; box-shadow: inset 0 0 0 6px #5e3519; }
+  .pit { aspect-ratio:1; border-radius:50%; background:#4a2810; box-shadow: inset 0 6px 12px #000a; color:#fbe9c9; display:flex; flex-direction:column; align-items:center; justify-content:center; font:600 22px ui-monospace,monospace; position:relative; transition: background .15s, transform .15s; user-select:none }
+  .pit small { font:11px system-ui; color:#d9b98d; position:absolute; bottom:-18px } .pit small.top { bottom:auto; top:-17px }
+  .pit .seeds { display:flex; flex-wrap:wrap; width:62%; justify-content:center; gap:2px; margin-top:4px }
+  .pit .seeds i { width:6px; height:6px; border-radius:50%; background:#f3d9a8 }
+  .pit.mine.legal { cursor:pointer; box-shadow: inset 0 6px 12px #000a, 0 0 0 3px #f6c453 }
+  .pit.mine.legal:hover { transform:scale(1.05) }
+  .pit.hot { background:#9c5a24 } .pit.lift { background:#2f6f8f } .pit.cap { background:#a33 }
+  .store { color:#fbe9c9; text-align:center; font:13px system-ui } .store b { display:block; font:700 30px ui-monospace,monospace }
+  .msg { font-size:17px; margin:10px 0; min-height:24px }
+  .why td, .why th { padding:4px 8px } .why tr.pick td { font-weight:700 }
+  @media (max-width:700px) { .board { padding:12px; gap:6px; border-radius:30px } .pit { font-size:15px } .pit .seeds { display:none } }
+.pit { border:0; padding:0; font:600 22px ui-monospace,monospace } .pit:disabled { opacity:1; cursor:default }
+.rules { line-height:1.6; padding-left:18px }
