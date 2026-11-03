@@ -1,0 +1,4 @@
+*.log
+/pallanguzhi
+*.bundle
+dist/
