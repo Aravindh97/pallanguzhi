@@ -20,6 +20,10 @@ jobs:
       - uses: actions/setup-node@v4
         with: {node-version: "24", cache: npm, cache-dependency-path: web/package-lock.json}
       - run: ./web/build.sh dist
+        env:
+          # Set in Settings > Secrets and variables > Actions > Variables once the
+          # server is deployed; without it the page offers only the AI game.
+          VITE_SERVER_URL: ${{ vars.SERVER_URL }}
       - uses: actions/upload-pages-artifact@v3
         with: {path: dist}
   deploy:

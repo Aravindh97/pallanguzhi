@@ -12,3 +12,7 @@
   @media (max-width:700px) { .board { padding:12px; gap:6px; border-radius:30px } .pit { font-size:15px } .pit .seeds { display:none } }
 .pit { border:0; padding:0; font:600 22px ui-monospace,monospace } .pit:disabled { opacity:1; cursor:default }
 .rules { line-height:1.6; padding-left:18px }
+.tabs { margin:0 }
+.player { display:inline-flex; align-items:center; gap:5px; font-size:14px }
+.dot { width:9px; height:9px; border-radius:50%; background:#c9ced4; display:inline-block } .dot.on { background:var(--ok) }
+.warn { color:var(--warn); margin:8px 0 }

@@ -7,5 +7,5 @@ export default defineConfig({
   base: "./",
   plugins: [react()],
   build: { outDir: "../dist", emptyOutDir: true },
-  test: { environment: "jsdom" },
+  test: { environment: "jsdom", include: ["src/**/*.test.tsx"] },
 });

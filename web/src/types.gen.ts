@@ -7,6 +7,12 @@ export interface Board {
   turn: number;
 }
 
+export interface ClientMsg {
+  type: string;
+  pit: number;
+  version: number;
+}
+
 export interface Event {
   kind: string;
   pit: number;
@@ -15,10 +21,44 @@ export interface Event {
   store: number[];
 }
 
+export interface LastMove {
+  seat: number;
+  pit: number;
+  trace: Event[] | null;
+}
+
 export interface MoveScore {
   pit: number;
   score: number;
   captured: number;
+}
+
+export interface PlayerView {
+  name: string;
+  joined: boolean;
+  online: boolean;
+}
+
+export interface ServerMsg {
+  type: string;
+  seat?: number | null;
+  token?: string;
+  state?: State | null;
+  error?: string;
+}
+
+export interface State {
+  code: string;
+  board: Board;
+  over: boolean;
+  final: number[];
+  moves: number[] | null;
+  players: PlayerView[];
+  spectators: number;
+  version: number;
+  game: number;
+  rematch: boolean[];
+  last_move?: LastMove | null;
 }
 
 export interface Stats {

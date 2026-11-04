@@ -1,0 +1,15 @@
+# Render Blueprint: Dashboard -> New -> Blueprint -> pick this repo.
+# The game is public and anonymous, so the web service is public by design.
+services:
+  - type: web
+    name: pallanguzhi
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: ADDR
+        value: 0.0.0.0:10000
+      - key: TRUST_PROXY        # Render's proxy sets X-Forwarded-For
+        value: "1"
+      - key: ORIGINS            # the GitHub Pages copy of the page may connect too
+        value: https://aravindh97.github.io

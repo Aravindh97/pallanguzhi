@@ -1,0 +1,6 @@
+.git
+dist
+web/node_modules
+web/public/app.wasm
+web/test-results
+web/playwright-report
